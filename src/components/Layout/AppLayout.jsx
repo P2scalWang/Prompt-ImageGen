@@ -28,6 +28,11 @@ export default function AppLayout() {
 
   return (
     <div className="app-layout" data-theme={theme}>
+      {/* Visual Background Elements */}
+      <div className="bg-grid"></div>
+      <div className="bg-orb orb-1"></div>
+      <div className="bg-orb orb-2"></div>
+      
       <Sidebar />
       <main className="canvas-area">
         <div className="canvas-content custom-scrollbar">
