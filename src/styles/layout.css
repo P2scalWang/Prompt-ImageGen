@@ -1,0 +1,54 @@
+/* Login */
+.login-wrapper{min-height:100vh;display:grid;place-items:center;padding:32px;background:linear-gradient(135deg,#fbfaf7 0%,#eef5f1 54%,#f6e7ce 100%)}
+.login-box{width:100%;max-width:440px;padding:34px;border-radius:14px;animation:floatUp .35s ease;background:#fff}
+.brand-header{text-align:left;margin-bottom:30px}
+.logo-glow{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);font-size:1.45rem;margin-bottom:18px}
+.brand-header h1{font-size:1.65rem;margin-bottom:6px;color:var(--ink)}
+.brand-header p{font-size:.9rem;color:var(--text-secondary)}
+.cyber-form{margin-bottom:26px}
+.cyber-form .input-field{margin-bottom:24px}
+.auth-hint{font-size:.82rem;color:var(--text-secondary);border-top:1px solid var(--line);padding-top:18px}
+.hint-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{background:var(--bg-surface-muted);border:1px solid var(--line);padding:5px 10px;border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:.75rem;color:var(--ink)}
+
+/* App Layout */
+.app-layout{display:flex;height:100vh;overflow:hidden;background:var(--bg-page)}
+.glass-sidebar{width:272px;height:100%;background:var(--bg-sidebar);color:#eef5f1;display:flex;flex-direction:column;z-index:10;flex-shrink:0;border-right:1px solid rgba(255,255,255,.08)}
+.sidebar-header{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand-mini{display:flex;align-items:center;gap:12px}
+.brand-icon{width:38px;height:38px;border-radius:10px;background:#eef5f1;color:var(--accent-strong);display:grid;place-items:center;font-size:1.1rem}
+.brand-mini h2{font-size:1rem;margin:0;color:#fff}
+.brand-mini p{font-size:.72rem;color:#b8c8c0;margin:2px 0 0}
+
+/* Sidebar Nav */
+.sidebar-nav{flex:1;overflow-y:auto;padding:18px 12px}
+.nav-section{margin-bottom:24px}
+.nav-section-title{display:block;font-size:.68rem;color:#8fa39a;letter-spacing:.08em;padding:0 10px;margin-bottom:8px;font-weight:700;text-transform:uppercase}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);color:#d7e0dc;text-decoration:none;font-size:.9rem;font-weight:600;transition:.18s;margin-bottom:4px}
+.nav-item:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav-item.active{background:#eef5f1;color:var(--bg-sidebar-strong)}
+.nav-icon{font-size:1rem;width:22px;text-align:center}
+
+/* Sidebar Footer */
+.sidebar-footer-area{padding:16px;border-top:1px solid rgba(255,255,255,.08);background:var(--bg-sidebar-strong)}
+.user-info-card{display:flex;align-items:center;gap:10px;padding:10px;background:rgba(255,255,255,.07);border-radius:var(--radius-md)}
+.user-avatar{width:34px;height:34px;display:grid;place-items:center;background:#eef5f1;color:var(--accent-strong);border-radius:8px;font-size:1rem}
+.user-details{display:flex;flex-direction:column;min-width:0}
+.user-name{font-size:.88rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.role-badge{font-size:.68rem;font-weight:800;padding:2px 6px;border-radius:var(--radius-sm);letter-spacing:.03em;display:inline-block;width:fit-content;text-transform:uppercase}
+.role-badge.admin{color:#fff;background:var(--plum)}
+.role-badge.user{color:var(--bg-sidebar-strong);background:#f6e7ce}
+.btn-logout{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-md);color:#d7e0dc;font-size:.82rem;font-weight:700;cursor:pointer;transition:.18s;margin-top:12px}
+.btn-logout:hover{background:var(--danger);border-color:var(--danger);color:#fff}
+
+/* Canvas Area */
+.canvas-area{flex:1;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.canvas-content{flex:1;overflow-y:auto;padding:28px}
+.canvas-header{margin:0 0 20px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.project-info h2{font-size:1.45rem;margin-bottom:8px;color:var(--ink)}
+.status-badges{display:flex;gap:8px;flex-wrap:wrap}
+.status-badge{font-size:.72rem;font-weight:800;padding:4px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.02em}
+.pulse-blue{color:var(--accent-strong);background:var(--accent-soft)}
+.pulse-purple{color:var(--plum);background:var(--plum-soft)}
+.pulse-green{color:#266d42;background:#dff0df}
+.header-tools{display:flex;gap:10px;flex-wrap:wrap}
