@@ -10,6 +10,14 @@ export function ThemeProvider({ children }) {
     localStorage.setItem('app_theme', theme);
   }, [theme]);
 
+  useEffect(() => {
+    const handleThemeChange = (event) => {
+      setTheme(event.detail?.theme || 'light');
+    };
+    window.addEventListener('app-theme-change', handleThemeChange);
+    return () => window.removeEventListener('app-theme-change', handleThemeChange);
+  }, []);
+
   const toggleTheme = () => {
     setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
@@ -21,6 +29,7 @@ export function ThemeProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) throw new Error('useTheme must be used within ThemeProvider');
