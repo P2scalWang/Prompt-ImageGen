@@ -40,8 +40,10 @@
 .theme-dropdown .cyber-select{padding-top:8px;padding-bottom:8px;font-size:.86rem}
 
 /* User History */
-.history-layout{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start}
-.history-list{padding:14px;position:sticky;top:0;max-height:calc(100vh - 150px);overflow-y:auto}
+.history-page{height:100%;width:100%;display:flex;flex-direction:column;overflow:hidden}
+.history-page .page-header{flex-shrink:0}
+.history-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:18px;align-items:stretch;flex:1;min-height:0}
+.history-list{padding:14px;height:100%;max-height:none;overflow-y:auto}
 .history-list-item{width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:12px;margin-bottom:10px;cursor:pointer;transition:.18s;display:flex;flex-direction:column;gap:6px;color:var(--text-primary)}
 .history-list-item:hover{border-color:var(--accent);box-shadow:var(--shadow-sm)}
 .history-list-item.active{border-color:var(--accent);background:var(--accent-soft)}
@@ -50,7 +52,7 @@
 .history-empty{color:var(--text-secondary);font-size:.9rem;padding:14px;border:1px dashed var(--line-strong);border-radius:var(--radius-md);background:var(--bg-surface-muted)}
 .history-meta{display:flex;gap:6px;flex-wrap:wrap}
 .history-meta span{font-size:.68rem;font-weight:800;text-transform:uppercase;color:var(--text-secondary);background:var(--bg-surface-muted);border:1px solid var(--line);border-radius:999px;padding:3px 7px}
-.history-detail{min-width:0}
+.history-detail{min-width:0;height:100%;overflow-y:auto;padding-right:8px}
 .history-detail .canvas-header{margin-bottom:18px}
 .tool-btn.danger{border-color:var(--danger-soft);color:var(--danger)}
 .tool-btn.danger:hover{border-color:var(--danger);background:var(--danger-soft);color:var(--danger)}
@@ -126,6 +128,10 @@
   .dashboard-grid{grid-template-columns:1fr}
   .chat-console{width:calc(100vw - 28px);left:50%}
   .admin-stats-grid{grid-template-columns:1fr 1fr}
+  .history-page{height:auto;overflow:visible}
+  .history-layout{grid-template-columns:1fr;height:auto;overflow:visible}
+  .history-list{height:auto;max-height:360px}
+  .history-detail{height:auto;overflow:visible;padding-right:0}
 }
 @media(max-width:640px){
   .admin-stats-grid{grid-template-columns:1fr}
