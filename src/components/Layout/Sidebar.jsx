@@ -1,18 +1,27 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
 
 export default function Sidebar() {
   const { user, isAdmin, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <aside className="glass-sidebar">
       <div className="sidebar-header">
         <div className="brand-mini">
           <span className="brand-icon">✨</span>
-          <div>
+          <div style={{ flex: 1 }}>
             <h2>PROMPT PRO</h2>
             <p>Cinematic Edition</p>
           </div>
+          <button 
+            className="theme-toggle-btn" 
+            onClick={toggleTheme} 
+            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
         </div>
       </div>
 
